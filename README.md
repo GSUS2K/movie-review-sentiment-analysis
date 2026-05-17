@@ -29,7 +29,10 @@ https://github.com/GSUS2K/movie-review-sentiment-analysis
 
 ## Dataset
 
-The dataset used is the **IMDb Dataset of 50K Movie Reviews**.
+The dataset used in this project is the **IMDb Dataset of 50K Movie Reviews**.
+
+Dataset source:  
+https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 
 The original dataset contains two columns:
 
@@ -38,7 +41,14 @@ The original dataset contains two columns:
 | `review` | Text content of the movie review |
 | `sentiment` | Sentiment label: positive or negative |
 
-Although the original dataset has only two columns, the `review` text is transformed into thousands of numerical TF-IDF features for machine learning. Additional engineered features were also created to improve analysis.
+> Note: The dataset file is not included in this GitHub repository because the `dataset/` folder is ignored using `.gitignore`.  
+> To run the project, download the dataset manually from Kaggle and place the CSV file inside the `dataset/` folder.
+
+Expected dataset path:
+
+```text
+dataset/IMDB Dataset.csv
+```
 
 ---
 
@@ -244,46 +254,78 @@ cd movie-review-sentiment-analysis
 pip install -r requirements.txt
 ```
 
-### 4. Open Jupyter Notebook
+### 4. Download the Dataset
+
+The dataset is not included in this repository because the `dataset/` folder is ignored using `.gitignore`.
+
+Download the dataset from Kaggle:
+
+```text
+https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+```
+
+After downloading, create a folder named `dataset` in the project root.
+
+Your folder structure should look like this:
+
+```text
+movie-review-sentiment-analysis/
+│
+├── dataset/
+│   └── IMDB Dataset.csv
+│
+├── notebook/
+│   └── movie_sentiment_project.ipynb
+│
+├── outputs/
+├── models/
+├── report/
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+The dataset file must be placed exactly here:
+
+```text
+dataset/IMDB Dataset.csv
+```
+
+### 5. Open Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
-### 5. Run the Notebook
+### 6. Run the Notebook
 
-Open and run the notebook:
+Open the notebook:
 
 ```text
 notebook/movie_sentiment_project.ipynb
 ```
 
----
+Then run all cells from top to bottom.
 
-## Sample Prediction
+### 7. Generated Files
 
-Example positive review:
-
-```python
-predict_sentiment("The movie was amazing and the acting was excellent.")
-```
-
-Output:
+After running the notebook, the following files will be generated:
 
 ```text
-Positive Review
+outputs/enhanced_imdb_reviews.csv
+models/movie_sentiment_pipeline.pkl
 ```
 
-Example negative review:
+The `enhanced_imdb_reviews.csv` file contains the cleaned and feature-engineered dataset.
 
-```python
-predict_sentiment("The movie was boring, slow and disappointing.")
-```
+The `movie_sentiment_pipeline.pkl` file contains the saved machine learning pipeline.
 
-Output:
+### Note
 
-```text
-Negative Review
+If the `outputs/` or `models/` folders do not exist after cloning, create them manually before running the notebook:
+
+```bash
+mkdir outputs models
 ```
 
 ---
