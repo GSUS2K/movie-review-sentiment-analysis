@@ -1,0 +1,6 @@
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*.pyc
+dataset/
+outputs/enhanced_imdb_reviews.csv
