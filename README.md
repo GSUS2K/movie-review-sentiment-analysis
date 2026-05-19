@@ -376,3 +376,17 @@ This project covers important concepts such as data cleaning, data manipulation,
 - Add multilingual sentiment analysis.
 
 ---
+
+## For Students
+
+This repository can be used as a reference for building a Python data science project involving NLP, machine learning, EDA, model evaluation, clustering, and report preparation.
+
+You can fork the repository and modify it for learning purposes.
+
+---
+
+## Contributing
+
+Suggestions and improvements are welcome. You can fork the repository, make changes, and create a pull request.
+
+---
