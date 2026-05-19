@@ -224,9 +224,6 @@ Movie_Sentiment_Project/
 │   ├── top_positive_words.png
 │   └── top_negative_words.png
 │
-├── report/
-│   └── final_report.pdf
-│
 ├── README.md
 ├── requirements.txt
 └── .gitignore
